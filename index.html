@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<title>Page Title</title>
+<link rel = "stylesheet" href="style.css">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body>
+
+
+<div id = "myBox">
+    <h1 style="display: inline-flex;">To: every ladies</h1>
+</div>
+
+<div style="text-align: center; padding-top: 50px;">
+    <button id = "myBtn">Bấm nút để tiếp tục nheeeee!!</button>
+</div>
+<div class="center">
+    <div id = "hidBox" hidden = "hidden">
+        <audio id="myAudio" loop>
+            <source src="backgroundmusic.mp3" type="audio/mpeg">
+        </audio>
+
+        <div id = "textRun">
+            <h1 class="runningText">Xin chân thành chúc CÁC CÔ, DÌ, CHỊ, EM <span id = "special">8 tháng 3</span> zui zẻ nhee❤️❤️❤️......</h1>
+        </div>
+        <div class = "image-container">
+            <img src="heartsDog.gif" id = "myImg">
+            <img src="us.gif" alt="us" id = "myCop">
+            <img src="heartsDog.gif" id = "myImg">
+
+        </div>
+    </div>
+</div>
+<script>
+    const box = document.getElementById("myBox");
+    console.log(box);
+    const hidBox = document.getElementById('hidBox');
+    let hidden = hidBox.getAttribute("hidden");
+
+    const myBtn = document.getElementById('myBtn');
+    myBtn.addEventListener("click", () => {
+        var x = document.getElementById("myAudio");
+        x.play();
+
+        if (!hidden) {
+            hidBox.setAttribute("hidden", "hidden");
+            hidden = true;
+        } else {
+            hidBox.removeAttribute("hidden");
+            hidden = false;
+        }
+    });
+
+</script>
+</body>
+</html>
